@@ -14,7 +14,7 @@
 
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "Cyber60";
+        display-name = "C60-Dongle";
         transform = <&default_transform>;
     };
 
