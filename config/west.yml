@@ -4,18 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: carrefinho
       url-base: https://github.com/carrefinho
-    - name: seeed
-      url-base: https://github.com/Seeed-Studio
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: seeed-xiao-ble-zmk
-      remote: seeed
-      revision: release
     - name: prospector-zmk-module
       remote: carrefinho
-      revision: main
+      revision: feat/new-status-screens
   self:
     path: config
