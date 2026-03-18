@@ -1,9 +1,0 @@
-if SHIELD_CYBER60_PERIPHERAL
-
-config ZMK_SPLIT_BLE_PERIPHERAL
-    default y
-
-config ZMK_USB
-    default n
-
-endif
