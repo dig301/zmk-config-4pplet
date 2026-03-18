@@ -18,4 +18,5 @@ include:
     shield: cyber60_dongle prospector_adapter
   # Keyboard: Cyber60 as a split keyboard peripheral
   - board: cyber60_rev_d
-    shield: cyber60_peripheral
+    shield: cyber60_peripheral settings_reset
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
