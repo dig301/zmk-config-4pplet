@@ -1,7 +1,5 @@
 # This file generates the GitHub Actions matrix
 ---
 include:
-  # Keyboard: Cyber60 as a split keyboard peripheral
   - board: cyber60_rev_d
-    shield: cyber60_peripheral settings_reset
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_USB=n
+    shield: cyber60_left
