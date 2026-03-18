@@ -1,1 +1,9 @@
-/* Empty overlay - BLE central is configured by prospector_adapter */
+/ {
+    chosen {
+        zmk,kscan = &null_kscan;
+    };
+
+    null_kscan: kscan_null {
+        compatible = "zmk,kscan-null";
+    };
+};
