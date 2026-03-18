@@ -13,4 +13,6 @@
 #
 ---
 include:
+  # Keyboard: Cyber60 as a split keyboard peripheral
   - board: cyber60_rev_d
+    shield: cyber60_peripheral
