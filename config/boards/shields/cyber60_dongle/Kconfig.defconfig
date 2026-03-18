@@ -1,0 +1,6 @@
+if SHIELD_CYBER60_DONGLE
+
+config ZMK_SPLIT_BLE_CENTRAL
+    default y
+
+endif
