@@ -1,5 +1,1 @@
-/ {
-    chosen {
-        zmk,bt = &bt;
-    };
-};
+/* Empty overlay - BLE central is configured by prospector_adapter */
