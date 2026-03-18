@@ -23,7 +23,10 @@ config ZMK_BLE
 	default y
 
 config ZMK_USB
-	default y
+	default y if !ZMK_SPLIT_ROLE_PERIPHERAL
+
+config ZMK_SPLIT_ROLE_PERIPHERAL
+	def_bool ZMK_SPLIT && !ZMK_SPLIT_ROLE_CENTRAL
 	
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
