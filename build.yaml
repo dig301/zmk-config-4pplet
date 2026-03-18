@@ -13,9 +13,4 @@
 #
 ---
 include:
-  # Dongle: Seeed XIAO BLE with cyber60_dongle + prospector_adapter shields
-  - board: seeeduino_xiao_ble
-    shield: cyber60_dongle prospector_adapter
-  # Keyboard: Cyber60 as a split keyboard peripheral
   - board: cyber60_rev_d
-    shield: cyber60_peripheral

@@ -1,6 +1,0 @@
-if SHIELD_CYBER60_PERIPHERAL
-
-config ZMK_SPLIT_BLE_PERIPHERAL
-    default y
-
-endif

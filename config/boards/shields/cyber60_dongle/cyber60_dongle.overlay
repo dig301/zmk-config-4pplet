@@ -1,5 +1,0 @@
-/ {
-    chosen {
-        zmk,bt = &bt;
-    };
-};

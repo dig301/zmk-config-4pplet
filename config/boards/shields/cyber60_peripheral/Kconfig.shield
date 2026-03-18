@@ -1,2 +1,0 @@
-config SHIELD_CYBER60_PERIPHERAL
-    def_bool $(shields_list_contains,cyber60_peripheral)
