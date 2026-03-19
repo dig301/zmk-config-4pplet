@@ -1,4 +1,4 @@
-if SHIELD_CYBER60_DONGLE
+if SHIELD_C60D
 
 config ZMK_KEYBOARD_NAME
     default "C60"

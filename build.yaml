@@ -3,3 +3,6 @@
 include:
   # Keyboard: Cyber60 Rev D
   - board: cyber60@rev_d
+  # Dongle: XIAO BLE with c60d + prospector_adapter shields
+  - board: xiao_ble//zmk
+    shield: c60d prospector_adapter
