@@ -2,5 +2,5 @@
 ---
 include:
   # Keyboard: Cyber60 as left half
-  - board: cyber60_rev_d
+  - board: cyber60_rev_d@4/nrf52840/zmk
     shield: cyber60_left

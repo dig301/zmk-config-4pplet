@@ -1,0 +1,15 @@
+board:
+  name: cyber60_rev_d
+  vendor: 4pplet
+  revision:
+    format: number
+    default: "4"
+    revisions:
+      - name: "4"
+  socs:
+    - name: nrf52840
+      variants:
+        - name: nrf52840
+          variants:
+            - name: zmk
+              default: true
