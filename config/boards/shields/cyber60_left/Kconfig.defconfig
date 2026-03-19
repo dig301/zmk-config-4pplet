@@ -1,0 +1,9 @@
+if SHIELD_CYBER60_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "C60 Left"
+
+config ZMK_SPLIT
+    default y
+
+endif
