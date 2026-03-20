@@ -6,4 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
     default y
 
+select ZMK_USB
+
 endif
