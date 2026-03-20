@@ -3,5 +3,10 @@ board:
   vendor: 4pplet
   socs:
     - name: nrf52840
-  revisions:
-    - name: rev_d
+      variants:
+        - name: zmk
+  revision:
+    format: string
+    default: rev_d
+    revisions:
+      - rev_d
