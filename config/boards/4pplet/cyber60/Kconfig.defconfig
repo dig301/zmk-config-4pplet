@@ -1,0 +1,18 @@
+# Copyright (c) 2022 The ZMK Contributors
+# Copyright (c) 2022 Stefan Sundin (4pplet)
+# SPDX-License-Identifier: MIT
+
+if BOARD_CYBER60
+
+config BOARD_DESCRIPTION
+    string
+    default "Cyber60 keyboard"
+
+choice
+    prompt "Cyber60 board revision"
+    depends on BOARD_CYBER60
+
+source "boards/4pplet/cyber60/revision.cmake"
+endchoice
+
+endif # BOARD_CYBER60

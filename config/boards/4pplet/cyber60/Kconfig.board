@@ -1,0 +1,13 @@
+# Copyright (c) 2022 The ZMK Contributors
+# Copyright (c) 2022 Stefan Sundin (4pplet)
+# SPDX-License-Identifier: MIT
+
+config BOARD_CYBER60
+    bool "Cyber60"
+    depends on SOC_NRF52840_QIAA
+    select ARCH_BOARD_NRF52840
+    select NRF_FPU
+    imply SENSOR
+    imply USB_DEVICE_STACK
+    select LED_STATUS
+    select WS2812_STRIP
