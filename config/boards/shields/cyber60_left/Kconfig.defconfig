@@ -17,6 +17,9 @@ config USB_NRFX
 config USB_DEVICE_STACK
     default y
 
+config USB_DEVICE_HID
+    default y
+
 endif # USB
 
 endif
