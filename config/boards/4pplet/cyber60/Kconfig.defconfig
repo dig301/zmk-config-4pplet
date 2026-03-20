@@ -8,11 +8,4 @@ config BOARD_DESCRIPTION
     string
     default "Cyber60 keyboard"
 
-choice
-    prompt "Cyber60 board revision"
-    depends on BOARD_CYBER60
-
-source "boards/4pplet/cyber60/revision.cmake"
-endchoice
-
 endif # BOARD_CYBER60
