@@ -48,21 +48,4 @@
             RC(9,6)
         >;
     };
-
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "C60";
-        transform = <&default_transform>;
-    };
-
-    chosen {
-        zmk,physical-layout = &physical_layout0;
-    };
-};
-
-&usbd {
-    status = "okay";
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
 };
