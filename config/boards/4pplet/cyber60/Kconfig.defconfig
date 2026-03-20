@@ -3,6 +3,10 @@
 
 if BOARD_CYBER60
 
+config CYBER60_LED_STATUS
+	bool "Enable LED status indicators for BLE profiles"
+	default y
+
 config ZMK_KEYBOARD_NAME
 	default "cyber60"
 
