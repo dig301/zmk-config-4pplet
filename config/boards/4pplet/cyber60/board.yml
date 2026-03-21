@@ -3,3 +3,8 @@ board:
   vendor: 4pplet
   socs:
     - name: nrf52840
+  revision:
+    format: custom
+    default: rev_d
+    revisions:
+      - name: rev_d

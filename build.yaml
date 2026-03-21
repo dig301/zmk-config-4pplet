@@ -5,5 +5,5 @@ include:
   - board: xiao_ble//zmk
     shield: c60d prospector_adapter
   # Keyboard: Cyber60 Rev D as split peripheral (communicates via dongle)
-  - board: cyber60/nrf52840
+  - board: cyber60@rev_d
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
