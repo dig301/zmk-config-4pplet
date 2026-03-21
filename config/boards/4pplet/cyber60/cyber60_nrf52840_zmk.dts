@@ -119,12 +119,6 @@
     };
 };
 
-&usbd {
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
-};
-
 &pwm0 {
     status = "okay";
     pinctrl-0 = <&pwm0_default>;
