@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
-
 / {
     magic_mapper {
         compatible = "zmk,bootmode-to-magic-mapper";
