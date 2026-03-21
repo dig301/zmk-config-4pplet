@@ -6,7 +6,7 @@ board:
       variants:
         - name: zmk
   revision:
-    format: string
+    format: custom
     default: rev_d
     revisions:
-      - rev_d
+      - name: rev_d
