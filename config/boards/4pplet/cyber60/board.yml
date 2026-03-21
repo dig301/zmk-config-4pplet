@@ -3,10 +3,8 @@ board:
   vendor: 4pplet
   socs:
     - name: nrf52840
-      variants:
-        - name: zmk
   revision:
-    format: major.minor.patch
-    default: "1.0.0"
+    format: custom
+    default: rev_d
     revisions:
-      - name: "1.0.0"
+      - name: rev_d
