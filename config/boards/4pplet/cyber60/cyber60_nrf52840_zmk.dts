@@ -6,69 +6,12 @@
 
 /dts-v1/;
 #include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/pwm/pwm.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_0;
-        zmk,underglow = &led_strip;
-        zmk,battery = &vbatt;
-        zmk,studio-rpc-uart = &cdc_acm_uart;
-    };
-
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 1>;
-        output-ohms = <2000000>;
-        full-ohms = <(1000000 + 2000000)>;
-        power-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
-    };
-
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder>;
-    };
-
-    encoder: encoder_1 {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
-
-    buzzer: pwm_buzzer {
-        compatible = "pwm-buzzer";
-        pwms = <&pwm0 0 1000 PWM_POLARITY_NORMAL>;
-        status = "okay";
-    };
-
-    leds {
-        compatible = "gpio-leds";
-        led_0: led_green {
-            gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
-            status = "okay";
-        };
-        led_1: led_red {
-            gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
-            status = "okay";
-        };
-        led_2: led_blue {
-            gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
-            status = "okay";
-        };
-    };
-
-    aliases {
-        ledgreen = &led_0;
-        ledred   = &led_1;
-        ledblue  = &led_2;
-        buzzer = &buzzer;
-    };
-
-    ext-power {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
     };
 
     kscan0: kscan {
@@ -116,29 +59,5 @@
             RC(8,0) RC(9,0) RC(8,1) RC(9,1) RC(8,3) RC(9,3) RC(8,4) RC(9,4) RC(8,5) RC(9,5) 
             RC(9,6)
         >;
-    };
-};
-
-&pwm0 {
-    status = "okay";
-    pinctrl-0 = <&pwm0_default>;
-    pinctrl-1 = <&pwm0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-
-&spi3 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        reg = <0>;
-        spi-max-frequency = <4000000>;
-        chain-length = <16>;
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
