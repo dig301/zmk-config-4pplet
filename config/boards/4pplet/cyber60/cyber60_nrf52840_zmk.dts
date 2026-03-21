@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+/dts-v1/;
+
 / {
     magic_mapper {
         compatible = "zmk,bootmode-to-magic-mapper";
