@@ -1,0 +1,10 @@
+# Copyright (c) 2022 The ZMK Contributors
+# Copyright (c) 2022 Stefan Sundin (4pplet)
+# SPDX-License-Identifier: MIT
+
+config BOARD_CYBER60
+    select SOC_NRF52840_QIAA
+    select ZMK_BOARD_COMPAT if BOARD_CYBER60_NRF52840_ZMK
+    imply RETAINED_MEM if BOARD_CYBER60_NRF52840_ZMK
+    imply RETENTION if BOARD_CYBER60_NRF52840_ZMK
+    imply RETENTION_BOOT_MODE if BOARD_CYBER60_NRF52840_ZMK

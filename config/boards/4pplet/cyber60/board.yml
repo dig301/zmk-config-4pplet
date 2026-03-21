@@ -6,7 +6,7 @@ board:
       variants:
         - name: zmk
   revision:
-    format: custom
-    default: rev_d
+    format: major.minor
+    default: 1.0
     revisions:
-      - name: rev_d
+      - name: 1.0
