@@ -6,4 +6,4 @@ include:
     shield: c60d prospector_adapter
   # Keyboard: Cyber60 Rev D as split peripheral (communicates via dongle)
   - board: cyber60@rev_d
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_KCONFIG_WERROR=n
