@@ -10,26 +10,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    magic_mapper {
-        compatible = "zmk,bootmode-to-magic-mapper";
-        status = "okay";
-        #address-cells = <1>;
-        #size-cells = <1>;
-        boot_retention: retention@0 {
-            compatible = "zephyr,retention";
-            status = "okay";
-            reg = <0x0 0x1>;
-        };
-    };
-
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_0;
         zmk,underglow = &led_strip;
         zmk,battery = &vbatt;
         zmk,studio-rpc-uart = &cdc_acm_uart;
-        zephyr,boot-mode = &boot_retention;
-        zmk,magic-boot-mode = &adafruit_boot_retention;
     };
 
     vbatt: vbatt {
@@ -130,14 +116,6 @@
             RC(8,0) RC(9,0) RC(8,1) RC(9,1) RC(8,3) RC(9,3) RC(8,4) RC(9,4) RC(8,5) RC(9,5) 
             RC(9,6)
         >;
-    };
-};
-
-&gpregret1 {
-    adafruit_boot_retention: retention@0 {
-        compatible = "zephyr,retention";
-        status = "okay";
-        reg = <0x0 0x1>;
     };
 };
 
