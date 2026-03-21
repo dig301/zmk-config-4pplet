@@ -4,8 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <../4pplet/cyber60/cyber60.dts>
-#include <cyber60_rev_d-pinctrl.dtsi>
+#include <dt-bindings/led/led.h>
+#include "cyber60_rev_d-pinctrl.dtsi"
+#include "cyber60_rev_d-layouts.dtsi"
 
 / {
     magic_mapper {
