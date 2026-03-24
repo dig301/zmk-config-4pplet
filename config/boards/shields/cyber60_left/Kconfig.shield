@@ -1,0 +1,2 @@
+config SHIELD_CYBER60_LEFT
+    def_bool $(shields_list_contains,cyber60_left)
